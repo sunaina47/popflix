@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import StarRating from './StarRating';
+import { API_KEY } from '../constants';
 
 const average = (arr) => arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
@@ -119,7 +120,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     function () {
       async function getMovieDetails() {
         setIsLoading(true);
-        const res = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`);
+        const res = await fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&i=${selectedId}`);
         const data = await res.json();
         setMovie(data);
         setIsLoading(false);
@@ -261,7 +262,6 @@ function Loader() {
 function ErrorMessage({ message }) {
   return <p className="error">{message}</p>;
 }
-const KEY = 'c0362931';
 
 export default function App() {
   const [movies, setMovies] = useState([]);
@@ -288,7 +288,7 @@ export default function App() {
       try {
         setIsLoading(true);
         setError('');
-        const res = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&s=${query}`);
+        const res = await fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${query}`);
 
         if (!res.ok) {
           throw new Error('Something went wrong with fetching movies');
