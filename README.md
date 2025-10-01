@@ -12,7 +12,7 @@ PopFlix is a movie discovery platform inspired by IMDb, where users can search f
 ## 🚀 Getting Started
 
 🌍 Live Demo
-🔗 https://popflix.vercel.app/
+🔗 https://popflix-sun.vercel.app/
 
 1. Clone the repository:
    ```bash
