@@ -1,3 +1,14 @@
+PopFlix 🎬
+PopFlix is a movie discovery platform inspired by IMDb, where users can search for movies, explore details, and rate them. The app integrates with a third-party movie database API to fetch real-time movie information such as titles, posters, genres, release dates, and ratings. It provides a clean and user-friendly interface for browsing movies and allows users to share their opinions through ratings.
+
+Key Features:
+
+🔍 Movie Search: Find movies instantly using API-powered search.
+📊 Movie Details: View information like synopsis, cast, release year, and poster.
+⭐ User Ratings: Add personal ratings for movies.
+⚡ API Integration: Real-time data fetched from an external movie database API.
+🎨 Responsive UI: Designed for seamless use across devices.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
