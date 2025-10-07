@@ -119,7 +119,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
       async function getMovieDetails() {
         setIsLoading(true);
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${process.env.NEXT_PUBLIC_API_KEY_APP}&i=${selectedId}`
+          `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY_APP}&i=${selectedId}`
         );
         const data = await res.json();
         setMovie(data);
@@ -289,7 +289,7 @@ export default function App() {
         setIsLoading(true);
         setError('');
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${process.env.NEXT_PUBLIC_API_KEY_APP}&s=${query}`
+          `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY_APP}&s=${query}`
         );
 
         if (!res.ok) {
